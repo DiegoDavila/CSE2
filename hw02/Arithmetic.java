@@ -3,7 +3,6 @@
 //Purpose: Calculate the total cost of items bought at Walmart
 //including the PA sales tax of 6%
 
-import java.text.DecimalFormat; //Used for rounding 
 
 //Class:
 public class Arithmetic{
@@ -48,18 +47,33 @@ public class Arithmetic{
         envelopesWithTax$=totalEnvelopesPrice$+(totalEnvelopesPrice$*taxPercent);
         totalPriceWithTax$=totalPrice$+(totalPrice$*taxPercent);
         
-        //To round to two decimal places: 
+        //Changing total prices to two decimal places:
+        double roundSocksPrice$=Math.round(100*totalSocksPrice$)/100.00;
+        double roundGlassesPrice$=Math.round(100*totalGlassesPrice$)/100.00;
+        double roundEnvelopesPrice$=Math.round(100*totalEnvelopesPrice$)/100.00;
+        double roundTotalPrice$=Math.round(100*totalPrice$)/100.00;
         
-        DecimalFormat d = new DecimalFormat("###.00");
+        //Changing prices plus tax to two decimal places:
+        double roundSocksPriceTax$=Math.round(100*socksWithTax$)/100.00;
+        double roundGlassesPriceTax$=Math.round(100*glassesWithTax$)/100.00;
+        double roundEnvelopesPriceTax$=Math.round(100*envelopesWithTax$)/100.00;
+        double roundTotalPriceTax$=Math.round(100*totalPriceWithTax$)/100.00;
      
         //Ticket Print:
         
     
-        System.out.println("Item: Pair of Socks Price: $" + (sockCost$) + " Quantity: " + (nSocks) + " Subtotal: $" + d.format(totalSocksPrice$) + " Total: $" + d.format(socksWithTax$));
-        System.out.println("Item: Drinking Glass Price: $" + (glassCost$) + " Quantity: " + (nGlasses) + " Subtotal: $" + d.format(totalGlassesPrice$) + " Total: $" + d.format(glassesWithTax$));
-        System.out.println("Item: Box of Envelopes Price: $" + (envelopeCost$) + " Quantity: " + (nEnvelopes) + " Subtotal: $" + d.format(totalEnvelopesPrice$) + " Total: $" + d.format(envelopesWithTax$));
-        System.out.println("This transaction Subtotal: $" + d.format(totalPrice$) + " Total of transaction: $" + d.format(totalPriceWithTax$));
+        System.out.println("Item: Pair of Socks Price: $" + (sockCost$) + " Quantity: " + (nSocks) + " Subtotal: $" + (roundSocksPrice$) + " Total: $" + (roundSocksPriceTax$));
+        System.out.println("Item: Drinking Glass Price: $" + (glassCost$) + " Quantity: " + (nGlasses) + " Subtotal: $" + (roundGlassesPrice$) + " Total: $" + (roundGlassesPriceTax$));
+        System.out.println("Item: Box of Envelopes Price: $" + (envelopeCost$) + " Quantity: " + (nEnvelopes) + " Subtotal: $" + (roundEnvelopesPrice$) + " Total: $" + (roundEnvelopesPriceTax$));
+        System.out.println("This transaction Subtotal: $" + (roundTotalPrice$) + " Total of transaction: $" + (roundTotalPriceTax$));
         
+        
+        //A simpler method to round to two decimal places would be to add
+        //import java.text.DecimalFormat;
+        //Before declaring class then
+        //Decimal Format x = new DecimalFormat("###.00#);
+        //inside class and main method and then 
+        // x.format(number or variable)
         
     } //end of main method
 } //end of class
