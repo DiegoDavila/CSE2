@@ -11,7 +11,7 @@
     //Exit loop
 //Print result
 
-import java.util.Scanner;
+import java.util.Scanner; //Scanner class
 
 //Class:
 public class Root{
@@ -19,10 +19,10 @@ public class Root{
     //Main method:
     public static void main(String[] args){
         
-        double x=0;
+        double x=0; //initializing number as 0 to then be changed
         Scanner scan=new Scanner(System.in);
         System.out.print("Enter a number greater than 0: ");
-        x=scan.nextDouble();
+        x=scan.nextDouble(); 
         
         while (x<0){ //loop in case user inputs number less than 0, so program does not have to restart
             System.out.println("You did not enter a number greater than 0");
@@ -36,7 +36,7 @@ public class Root{
         
         while (high-low>0.0000001){ //while the difference between high and low is 0.0000001
             
-            midpoint=((high+low)/2);
+            midpoint=((high+low)/2); 
             
             if (midpoint*midpoint>x){ //if the midpoint squared is greater than x
                 high=midpoint;
