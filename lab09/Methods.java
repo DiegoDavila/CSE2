@@ -30,7 +30,7 @@ public class Methods{
     
         while(!x.hasNextInt()) {
             System.out.println("You did not enter an int, try again: ");
-            x.nextInt(); 
+            x.next(); 
         }
         
         return x.nextInt();

@@ -14,11 +14,12 @@ public class LoopTheLoop{
          Scanner scan = new Scanner(System.in);
         
         int nStars = -1;
+        String x="1";
+        
+        System.out.print("Enter an int between 1 and 15: ");
         
         while (nStars<1 || nStars>15) {
         
-        	System.out.print("Enter an int between 1 and 15: ");
-        	
         	
         	if (scan.hasNextInt()) {
         		nStars=scan.nextInt();
@@ -36,11 +37,7 @@ public class LoopTheLoop{
         		while (!scan.hasNextInt()) {
         			System.out.println("You did not enter an int");
         			System.out.print("Enter an int between 1 and 15: ");
-    				nStars = scan.nextInt();
-    				
-        			if (scan.hasNextInt()){
-        				break;
-        			}	
+    				x = scan.next();
         		}	
         	}
         }
