@@ -95,7 +95,26 @@ public class FindDuplicates{
     
     public static boolean exactlyOneDup(int num[]){
         
-        Arrays.sort(num);
+       //First I will sort the array to make it easier to stop at exactly oneDup
+       
+       for(int k=0; k<num.length-1; k++){
+            
+        	for(int j=0; j<num.length-1; j++){
+                
+                if(num[j]>num[j+1]){
+                    
+                    int greater=num[j];
+                    int lesser=num[j+1];
+                    
+                    num[j]=lesser;
+                    num[j+1]=greater;
+                }   
+            
+            }
+            
+        }
+        
+        //end of code to sort array
         
         boolean result=false;
         int repetitions=0;
