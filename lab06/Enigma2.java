@@ -11,7 +11,7 @@ public class Enigma2{
     switch(n){
       case 12: 
       case 13: out+=13;
-      case 40: out+=40/0;
+      case 40: 
     }
     
     System.out.println(out);
@@ -22,7 +22,9 @@ public class Enigma2{
 /*
  * Error Report: Explain how you can use the java.lang exception to
  *     identify the runtime error in the above code
- * 
+ 
+ * The java.lang exception tells me the line on which the run time error is found 
+ and when I go to that line I see it has a number over 0. so I just remove that.
  * 
  * 
  * 

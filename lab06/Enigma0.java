@@ -36,7 +36,7 @@ public class Enigma0{
 
 /* Error report:
  *   Expand this comment:
- 1. (line 12) [] was placed after arg, it should be (String[] args) 
+
  2. variable "n" was not properly initialized to be used later in the line "To repeat..." "n" must be initialized before 
  taking user input. In addition, variable n was initialized twice (once inside if and once inside else) - it should only
  be initialized once

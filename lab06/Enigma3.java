@@ -17,10 +17,14 @@ public class Enigma3{
           n/=3;
           k-=7;
     }
+    
+    System.out.println("n = " +n+ "and k = "+k);
+    
     if(n*k%12< 12){
       n-=20;
       out+=n;
     }
+    System.out.println("n = " +n+ "and k = "+k);
     if(n*n>k){
       n=42;
       out+=n+k;
@@ -29,6 +33,7 @@ public class Enigma3{
       n=45;
       out+=n+k;
     }
+    System.out.println("n = " +n+ "and k = "+k);
     switch(n+k){
       case 114: 
         n-=11;
@@ -45,6 +50,7 @@ public class Enigma3{
         n-=3;
         k-=5;
     }
+    System.out.println("n = " +n+ "and k = "+k);
     
      out+=1/n + 1/k;   
     System.out.println(out);
@@ -55,7 +61,7 @@ public class Enigma3{
 /*
  * Error report:
  * 
- * 
+ * k=0 after the last switch statment 
  * 
  * 
  */
